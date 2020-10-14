@@ -1,6 +1,20 @@
 <html lang="no">
+<script src="clicks.js">
+
+</script>
 <body>
-    <h1>Hello world!</h1>
-    <img src="img/docker-logo.png"/>
+    <h1>Klikk på bildet!</h1>
+    <img onclick="imageClicked()" src="img/docker-logo.png"/>
+    <div id="clickCountText">lalala</div>
 </body>
+<style>
+    h1, div {
+        display: block;
+        text-align: center;
+    }
+    img {
+        display: block;
+        margin: auto;
+    }
+</style>
 </html>
