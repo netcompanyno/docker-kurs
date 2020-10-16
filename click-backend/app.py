@@ -5,7 +5,7 @@ from redis.exceptions import ConnectionError
 
 app = Flask(__name__)
 CORS(app)
-cache = Redis(host='redis', port=5678)
+cache = Redis(host='redis', port=6379)
 
 log = logging.create_logger(app)
 
