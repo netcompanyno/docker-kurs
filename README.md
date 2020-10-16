@@ -60,10 +60,7 @@ $ docker rm webapp
 ```
 
 ### Oppgave 3
+4.1 Kjør container med en portåpning mot port 3000
 
-3.1 Applikasjonen i [eksempelet](/javascripteksempel) mangler en fil for å fungere som ønsket.  
-Utvid Dockerfilen med en kommando som kopierer innholdet fra public-mappen inn i containeren
+4.2 Sjekk at du kan åpne webapplikasjonen fra nettleser
 
-3.2 Bygg nytt image med tag 1.0.1
-
-3.2 Kjør en container basert på det nye imaget du har bygget
