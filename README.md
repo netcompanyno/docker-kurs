@@ -74,17 +74,10 @@ $ curl localhost:3000
 eller åpne http://localhost:3000/ i en nettleser.
 
 ### Oppgave 4
-3.1 Applikasjonen i [eksempelet](/javascripteksempel) mangler en fil for å fungere som ønsket.  
-Utvid Dockerfilen med en kommando som kopierer innholdet fra public-mappen inn i containeren
+4.1 Som man kan se hvis man åpner webappen i en nettleser, mangler applikasjonen i [eksempelet](/javascripteksempel) 
+en fil for å fungere som ønsket.
+Utvid Dockerfilen med en kommando som kopierer innholdet fra public-mappen inn i containeren.
 
-3.2 Bygg nytt image med tag 1.0.1
-```shell script
-Løsningsforslag oppgave 3
-$ docker build -t javascripteksempel:1.0.1 javascripteksempel/.
-```
+4.2 Bygg nytt image med tag 1.0.1
 
-3.2 Kjør en container basert på det nye imaget du har bygget
-```shell script
-Løsningsforslag oppgave 3
-$ docker run -d --name webapp javascripteksempel:1.0.1
-```
+4.3 Kjør en container basert på det nye imaget du har bygget
