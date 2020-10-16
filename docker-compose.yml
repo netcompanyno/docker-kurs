@@ -10,3 +10,6 @@ services:
     image: "click-frontend"
     ports:
       - "3000:3000"
+  redis:
+    container_name: redis
+    image: "redis:alpine"
