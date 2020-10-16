@@ -29,4 +29,23 @@ Vi skal nå starte komponentene ved hjelp av `docker-compose`. Dette gjøres ved
 
 * Bygg hver av de to komponentene med `docker build`. Pass på at navngivningen stemmer overens med _image_ i `docker-compose.yml`.
 Kjør til slutt `docker-compose up` og se at alle tre komponentene starter opp. 
-(Vi har fortsatt ikke kommet helt dit at applikasjonen er tilgjengelig) 
+(Vi har fortsatt ikke kommet helt dit at applikasjonen er tilgjengelig)
+
+Løsningsforslag:
+```
+$ docker build -t click-backend click-backend/
+$ docker build -t click-frontend click-frontend/
+$ docker-compose up
+```
+
+## Oppgave 3
+Foreløpig skjer det jo ikke så veldig mye interessant når vi starter komponentene. Dette er fordi vi ikke har bundet 
+portene i containerne til porter på maskinen.
+
+* Legg inn portmapping for _click-frontend_ og _click-backend_ i `docker-compose.yml`. 
+Se i Dockerfilene hvilke porter som er benyttet, og map disse til de samme portene.
+
+Hvis du nå kjører `docker-compose up` skal du kunne gå til `localhost:3000` og se en nettside som kommer opp. 
+I outputen fra `docker-compose` kan man se at requester kommer inn til backend, men feiler videre mot Redis.
+Hvis du får opp nettsiden, men det ikke dukker opp noe tekst under bildet (og du ser en feil i konsollen i nettleseren),
+er det et tegn på at frontenden og backenden ikke klarer å snakke sammen.
