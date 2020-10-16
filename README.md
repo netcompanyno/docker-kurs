@@ -57,3 +57,5 @@ Det er fordi det mangler en mapping mellom portene her.
 * Legg inn en portmapping for _redis_ i `docker-compose.yml`.
 (Hint: du kan se hvilken port som er eksponert i containeren med  `docker ps` etter å ha startet den opp, 
 og hvilken port man prøver å koble til i kildekoden til backendkomponenten)
+
+Når du har satt opp portene riktig skal klikktelleren fungere, og man skal kunne se antall klikk under bildet.
