@@ -77,5 +77,32 @@ $ docker run -d --name webapp javascripteksempel:1.0.1
 
 ### Oppgave 4
 4.1 Kjør container med en portåpning mot port 3000
+```shell script
+Løsningsforslag oppgave 4
+$ docker run -d --name webapp -p 3000:3000 javascripteksempel:1.0.1
+```
 
 4.2 Sjekk at du kan åpne webapplikasjonen fra nettleser
+```shell script
+Løsningsforslag oppgave 4
+$ curl localhost:3000
+```
+
+Dockerfile fra oppgave 3
+```Dockerfile
+FROM node:alpine
+
+WORKDIR /app
+
+COPY app.js package.json package-lock.json index.html ./
+
+COPY ./public ./public
+
+RUN npm install
+
+USER node
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
+```
