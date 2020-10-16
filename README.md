@@ -18,7 +18,7 @@ Oppgave 1
 `Hint: docker build -t`
 ```shell script
 Løsningsforslag oppgave 1
-$ docker build -t javascripteksempel:1.0.0 javascripteksempel/.
+$ docker build -t javascripteksempel:1.0.0 javascripteksempel/
 ```
 
 1.2 Kjør en detached container med navn webapp basert på imaget du har bygget
