@@ -16,13 +16,11 @@
     }
 
     function fetchClicks() {
-        console.log("fetch");
         return fetch('http://localhost:5000/clicks')
             .then(res => res.text())
     }
 
     function sendClick() {
-        console.log("send")
         return fetch('http://localhost:5000/clicks', {method: 'POST'})
             .then(res => res.text());
     }
