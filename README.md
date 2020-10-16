@@ -79,3 +79,26 @@ Vi skal nå sette opp et volum som gjør at data lagres også hvis containeren s
 
 * Legg inn konfigurasjon for _volumes_ for _redis_ i `docker-compose.yml`. Det skal mappes til pathen `/data` i containeren.
 Du kan velge selv om du vil bruke et volume som du definerer nederst i filen, eller et bind mount som binder til en mappe på maskinen din.
+
+## Oppgave 6
+Sånn systemet vårt er satt opp til nå må vi manuelt bruke `docker build` for å bygge imagene før vi kan kjøre dem med 
+`docker-compose`.
+Hvis for eksempel noen andre skulle klonet repoet og startet applikasjonen, 
+er dette litt upraktisk fordi det medfører flere manuelle steg.
+For å unngå dette kan man legge til et parameter i `docker-compose.yml`, `build`, 
+hvor man spesifiserer pathen på samme måte som man gjør til `docker build`.
+
+* Legg til build-parameter for _click-backend_ og _click-frontend_.
+
+Etter dette kan du slette alle images (med `docker rmi`) og kjøre `docker-compose up` igjen, og se at imagene bygges automatisk.
+
+
+**NB!** 
+Hvis du har sett nøye på outputen har du kanskje sett noen linjer som dette:
+> WARNING: Image for service frontend was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+
+Dette vil si at imagene kun bygges hvis de ikke eksisterer allerede, så om man f.eks. gjør endringer i koden må man bruke
+en av kommandoene over for å tvinge gjennom et nytt bygg.
+
+
+#### Dette var siste oppgave, sjekk ut branch _docker-compose-oppgaver-fasit_ for løsningsforslag!
