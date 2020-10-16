@@ -6,14 +6,14 @@ kjøre en container, utføre noen kommandoer mot containeren, og rydde opp etter
 
 Videre skal vi gjøre noen endringer i Dockerfile, og sjekke at vi oppnår ønsket resultat.
 
-For å kunne gjøre dette fra lokalt klient må vi først installere Docker. 
-Instruksjoner for oppsett finnes [her](OPPSETT.md)
+For å kunne gjøre dette fra lokal klient må vi først installere Docker. 
+Instruksjoner for oppsett finnes i [OPPSETT.md](OPPSETT.md).
 
 
 Oppgave 1
 ------
 
-1.1 Bygg et image med tag 1.0.0 basert på [denne](javascripteksempel/Dockerfile) Dockerfilen
+1.1 Bygg et image med tag 1.0.0 basert på [denne Dockerfilen](javascripteksempel/Dockerfile).
 
 `Hint: docker build -t`
 ```shell script
@@ -33,7 +33,7 @@ Løsningsforslag oppgave 1
 $ docker ps
 ```
 
-1.4 Sjekk logger og status fra containeren
+1.4 Sjekk logger og stats fra containeren
 ```shell script
 Løsningsforslag oppgave 1
 $ docker logs webapp
@@ -42,7 +42,7 @@ $ docker container stats webapp
 
 ### Oppgave 2
 
-2.1 Åpne et shell mot containeren, og sjekk at javascript- og htmlfilene ligger der de skal
+2.1 Åpne et shell mot containeren, og sjekk at JavaScript- og HTML-filene ligger der de skal
 
 ```shell script
 Løsningsforslag oppgave 2
