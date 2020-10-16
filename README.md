@@ -28,5 +28,5 @@ Vi skal nå starte komponentene ved hjelp av `docker-compose`. Dette gjøres ved
 `docker-compose up`. Det man derimot vil se er at de imagene som compose-filen inneholder ikke eksisterer.
 
 * Bygg hver av de to komponentene med `docker build`. Pass på at navngivningen stemmer overens med _image_ i `docker-compose.yml`.
-Kjør til slutt `docker-compose up` og se at alle tre komponentene starter opp. 
+Kjør til slutt `docker-compose up` og se at begge komponentene starter opp.
 (Vi har fortsatt ikke kommet helt dit at applikasjonen er tilgjengelig) 
