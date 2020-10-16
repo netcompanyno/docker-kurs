@@ -6,7 +6,7 @@ kjøre en container, utføre noen kommandoer mot containeren, og rydde opp etter
 
 Videre skal vi gjøre noen endringer i Dockerfile, og sjekke at vi oppnår ønsket resultat.
 
-For å kunne gjøre dette fra lokalt klient må vi først installere Docker. 
+For å kunne gjøre dette fra lokal klient må vi først installere Docker. 
 Instruksjoner for oppsett finnes i [OPPSETT.md](OPPSETT.md).
 
 
