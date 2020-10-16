@@ -65,3 +65,17 @@ Om man skulle kjørt backenden direkte på maskinen, hadde man måttet publisere
 Redis-containeren, og bruke _localhost_ i stedet for _redis_ i tilkoblingen fra `app.py`.
 (Grunnen til at man bruker _localhost_ i `ìndex.html` er at dette er kode som kjører i nettleseren på maskinen, 
 og ikke fra selve Docker-containeren)
+
+## Oppgave 5
+Vi har nå en fungerende applikasjon som teller klikk, som vil peristere antall klikk hvis man stopper applikasjonen og 
+starter den igjen. Dette er fordi containeren beholdes mellom kjøringene. 
+
+Hvis man derimot stopper applikasjonen og kjører (bytt eventuelt ut `redis` hvis containeren din heter noe annet)
+```
+$ docker rm redis
+```
+og så starter igjen, vil tellingen være nullstilt. 
+Vi skal nå sette opp et volum som gjør at data lagres også hvis containeren slettes.
+
+* Legg inn konfigurasjon for _volumes_ for _redis_ i `docker-compose.yml`. Det skal mappes til pathen `/data` i containeren.
+Du kan velge selv om du vil bruke et volume som du definerer nederst i filen, eller et bind mount som binder til en mappe på maskinen din.
