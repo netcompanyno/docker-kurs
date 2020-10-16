@@ -61,8 +61,17 @@ $ docker rm webapp
 
 ### Oppgave 3
 3.1 Kjør container med en portåpning mot port 3000
+```shell script
+Løsningsforslag oppgave 3
+$ docker run -d --name webapp -p 3000:3000 javascripteksempel:1.0.1
+```
 
 3.2 Sjekk at du kan åpne webapplikasjonen fra nettleser
+```shell script
+Løsningsforslag oppgave 3
+$ curl localhost:3000
+```
+eller åpne http://localhost:3000/ i en nettleser.
 
 ### Oppgave 4
 3.1 Applikasjonen i [eksempelet](/javascripteksempel) mangler en fil for å fungere som ønsket.  
