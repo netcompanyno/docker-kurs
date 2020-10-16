@@ -6,6 +6,3 @@ services:
   frontend:
     container_name: frontend
     image: "click-frontend"
-  redis:
-    container_name: redis
-    image: "redis:alpine"
