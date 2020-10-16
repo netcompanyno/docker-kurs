@@ -13,3 +13,11 @@ services:
   redis:
     container_name: redis
     image: "redis:alpine"
+    volumes:
+      # med bind mount:
+#      - "./redis-data:/data"
+      # med volume:
+      - "redis_data:/data"
+volumes:
+  redis_data:
+    name: redis_data
