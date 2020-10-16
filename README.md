@@ -81,7 +81,7 @@ Utvid Dockerfilen med en kommando som kopierer innholdet fra public-mappen inn i
 3.2 Bygg nytt image med tag 1.0.1
 ```shell script
 Løsningsforslag oppgave 3
-$ docker build -t javascripteksempel:1.0.1 javascripteksempel/.
+$ docker build -t javascripteksempel:1.0.1 javascripteksempel/
 ```
 
 3.2 Kjør en container basert på det nye imaget du har bygget
