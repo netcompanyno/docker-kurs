@@ -44,4 +44,26 @@ $ docker container stats webapp
 
 2.1 Åpne et shell mot containeren, og sjekk at javascript- og htmlfilene ligger der de skal
 
+```shell script
+Løsningsforslag oppgave 2
+$ docker exec -it webapp sh
+
+# ls 
+```
+
 2.2 Stopp og slett containeren, la imaget fra oppgave 1 ligge
+
+```shell script
+Løsningsforslag oppgave 2
+$ docker stop webapp
+$ docker rm webapp
+```
+
+### Oppgave 3
+
+3.1 Applikasjonen i [eksempelet](/javascripteksempel) mangler en fil for å fungere som ønsket.  
+Utvid Dockerfilen med en kommando som kopierer innholdet fra public-mappen inn i containeren
+
+3.2 Bygg nytt image med tag 1.0.1
+
+3.2 Kjør en container basert på det nye imaget du har bygget

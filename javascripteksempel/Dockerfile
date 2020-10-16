@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY app.js package.json package-lock.json index.html ./
 
-
 RUN npm install
 
 USER node
