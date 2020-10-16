@@ -60,10 +60,22 @@ $ docker rm webapp
 ```
 
 ### Oppgave 3
-
 3.1 Applikasjonen i [eksempelet](/javascripteksempel) mangler en fil for å fungere som ønsket.  
 Utvid Dockerfilen med en kommando som kopierer innholdet fra public-mappen inn i containeren
 
 3.2 Bygg nytt image med tag 1.0.1
+```shell script
+Løsningsforslag oppgave 3
+$ docker build -t javascripteksempel:1.0.1 javascripteksempel/.
+```
 
 3.2 Kjør en container basert på det nye imaget du har bygget
+```shell script
+Løsningsforslag oppgave 3
+$ docker run -d --name webapp javascripteksempel:1.0.1
+```
+
+### Oppgave 4
+4.1 Kjør container med en portåpning mot port 3000
+
+4.2 Sjekk at du kan åpne webapplikasjonen fra nettleser
