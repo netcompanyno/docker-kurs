@@ -4,8 +4,6 @@ WORKDIR /app
 
 COPY app.js package.json package-lock.json index.html ./
 
-# oppgave?
-#COPY ./public ./public
 
 RUN npm install
 
