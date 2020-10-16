@@ -42,6 +42,6 @@ $ docker container stats webapp
 
 ### Oppgave 2
 
-2.1 Åpne et shell mot containeren, og sjekk at javascript- og htmlfilene ligger der de skal
+2.1 Åpne et shell mot containeren, og sjekk at JavaScript- og HTML-filene ligger der de skal
 
 2.2 Stopp og slett containeren, la imaget fra oppgave 1 ligge
