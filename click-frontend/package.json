@@ -1,13 +1,11 @@
 {
-  "name": "docker-click-frontend",
+  "name": "click-frontend",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.16.1",
-    "express-http-proxy": "^1.1.0",
-    "request": "^2.88.2"
+    "express": "^4.16.1"
   }
 }
