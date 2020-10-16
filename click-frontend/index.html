@@ -1,0 +1,44 @@
+<html lang="no">
+<body>
+    <h1>Klikk på bildet!</h1>
+    <img onclick="imageClicked()" src="img/docker-logo.png"/>
+    <div id="clickCountText"></div>
+</body>
+<script>
+    function imageClicked() {
+        sendClick().then(() => updateClicks());
+    }
+
+    function updateClicks() {
+        fetchClicks().then(count =>
+            document.getElementById("clickCountText").innerText = 'Bildet har blitt klikket på ' + count + ' ganger!'
+        );
+    }
+
+    function fetchClicks() {
+        console.log("fetch");
+        return fetch('http://localhost:5000/clicks')
+            .then(res => res.text())
+    }
+
+    function sendClick() {
+        console.log("send")
+        return fetch('http://localhost:5000/clicks', {method: 'POST'})
+            .then(res => res.text());
+    }
+
+    updateClicks();
+</script>
+<style>
+    h1, div {
+        display: block;
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+</style>
+</html>

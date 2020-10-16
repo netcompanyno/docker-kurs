@@ -1,5 +1,5 @@
 {
-  "name": "javascripteksempel",
+  "name": "docker-click-frontend",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
