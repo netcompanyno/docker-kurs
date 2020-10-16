@@ -60,7 +60,7 @@ $ docker rm webapp
 ```
 
 ### Oppgave 3
-4.1 Kjør container med en portåpning mot port 3000
+3.1 Kjør container med en portåpning mot port 3000
 
-4.2 Sjekk at du kan åpne webapplikasjonen fra nettleser
+3.2 Sjekk at du kan åpne webapplikasjonen fra nettleser
 
