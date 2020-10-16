@@ -51,11 +51,17 @@ Hvis du får opp nettsiden, men det ikke dukker opp noe tekst under bildet (og d
 er det et tegn på at frontenden og backenden ikke klarer å snakke sammen.
 
 ## Oppgave 4
-Som man kan se fra webappen og fra loggene får ikke backenden kontakt med Redis selv om Redis kjører.
-Det er fordi det mangler en mapping mellom portene her.
+Nå har vi fått til å kjøre applikasjonen vår, men har fortsatt ikke satt opp Redis.
+* Legg inn en service for Redis i `docker-compose.yml` - bruk imaget `redis:alpine`. 
+Pass på at servicen har samme navn som hosten spesifisert i tilkoblingen i `app.py`.
 
-* Legg inn en portmapping for _redis_ i `docker-compose.yml`.
-(Hint: du kan se hvilken port som er eksponert i containeren med  `docker ps` etter å ha startet den opp, 
-og hvilken port man prøver å koble til i kildekoden til backendkomponenten)
+Når du så starter komponentene med `docker-compose up` skal klikktelleren fungere!
 
-Når du har satt opp portene riktig skal klikktelleren fungere, og man skal kunne se antall klikk under bildet.
+#### Litt tilleggsinfo
+Merk at man her ikke trenger å publisere noen porter for Redis. 
+Dette er fordi Docker-containere by default kan snakke sammen på portene som er exposed i containerne, 
+basert på navnet til servicen.
+Om man skulle kjørt backenden direkte på maskinen, hadde man måttet publisere en port mappet til den eksponerte i 
+Redis-containeren, og bruke _localhost_ i stedet for _redis_ i tilkoblingen fra `app.py`.
+(Grunnen til at man bruker _localhost_ i `ìndex.html` er at dette er kode som kjører i nettleseren på maskinen, 
+og ikke fra selve Docker-containeren)
