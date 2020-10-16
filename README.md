@@ -49,3 +49,11 @@ Hvis du nå kjører `docker-compose up` skal du kunne gå til `localhost:3000` o
 I outputen fra `docker-compose` kan man se at requester kommer inn til backend, men feiler videre mot Redis.
 Hvis du får opp nettsiden, men det ikke dukker opp noe tekst under bildet (og du ser en feil i konsollen i nettleseren),
 er det et tegn på at frontenden og backenden ikke klarer å snakke sammen.
+
+## Oppgave 4
+Som man kan se fra webappen og fra loggene får ikke backenden kontakt med Redis selv om Redis kjører.
+Det er fordi det mangler en mapping mellom portene her.
+
+* Legg inn en portmapping for _redis_ i `docker-compose.yml`.
+(Hint: du kan se hvilken port som er eksponert i containeren med  `docker ps` etter å ha startet den opp, 
+og hvilken port man prøver å koble til i kildekoden til backendkomponenten)
